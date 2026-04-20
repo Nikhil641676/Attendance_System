@@ -99,19 +99,19 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="name" class="form-label">Full Name *</label>
-                            <input type="text" class="form-control" name="name" required>
+                            <label for="name" class="form-label">Full Name<span class="ismandatory">*</span></label>
+                            <input type="text" class="form-control" name="name" required placeholder="Enter Full Name">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="email" class="form-label">Email *</label>
-                            <input type="email" class="form-control" name="email" required>
+                            <label for="email" class="form-label">Email <span class="ismandatory">*</span></label>
+                            <input type="email" class="form-control" name="email" required placeholder="Enter Email">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="phone" class="form-label">Phone *</label>
-                            <input type="text" class="form-control" name="phone" required>
+                            <label for="phone" class="form-label">Phone <span class="ismandatory">*</span></label>
+                            <input type="text" class="form-control" name="phone" required placeholder="Enter Phone">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="role" class="form-label">Role *</label>
+                            <label for="role" class="form-label">Role <span class="ismandatory">*</span></label>
                             <select class="form-control" name="role" required>
                                 <option value="">Select Role</option>
                                 <option value="employee">Employee</option>
@@ -128,8 +128,8 @@
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="password" class="form-label">Password *</label>
-                            <input type="password" class="form-control" name="password" required>
+                            <label for="password" class="form-label">Password <span class="ismandatory">*</span></label>
+                            <input type="password" class="form-control" name="password" required placeholder="Enter Password">
                         </div>
                         <div class="col-md-12 mb-3">
                             <label for="address" class="form-label">Address</label>
@@ -175,19 +175,19 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="edit_name" class="form-label">Full Name *</label>
+                            <label for="edit_name" class="form-label">Full Name <spna class="ismandatory">*</span></label>
                             <input type="text" class="form-control" id="edit_name" name="name" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="edit_email" class="form-label">Email *</label>
+                            <label for="edit_email" class="form-label">Email <spna class="ismandatory">*</span></label>
                             <input type="email" class="form-control" id="edit_email" name="email" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="edit_phone" class="form-label">Phone *</label>
+                            <label for="edit_phone" class="form-label">Phone <spna class="ismandatory">*</span></label>
                             <input type="text" class="form-control" id="edit_phone" name="phone" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="edit_role" class="form-label">Role *</label>
+                            <label for="edit_role" class="form-label">Role <spna class="ismandatory">*</span></label>
                             <select class="form-control" id="edit_role" name="role" required>
                                 <option value="employee">Employee</option>
                                 <option value="manager">Manager</option>

@@ -54,6 +54,7 @@ Route::middleware(['auth', 'role:employee'])->prefix('employee')->name('employee
     Route::post('/clockout', [EmployeeController::class, 'clockOut'])->name('clockout');
     Route::post('/gps/save', [EmployeeController::class, 'saveGpsLocation'])->name('gps.save');
     Route::get('/history', [EmployeeController::class, 'history'])->name('history');
+
     Route::post('/correction', [EmployeeController::class, 'requestCorrection'])->name('correction');
     Route::post('/location-status', [EmployeeController::class, 'getLocationStatus'])->name('location.status');
 });

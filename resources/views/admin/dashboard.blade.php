@@ -46,7 +46,7 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <h6 class="card-title">Total Locations</h6>
+                            <h6 class="card-title">Total Branch</h6>
                             <h2 class="mb-0">{{ $totalLocations }}</h2>
                         </div>
                         <i class="fas fa-map-marker-alt fa-3x opacity-50"></i>

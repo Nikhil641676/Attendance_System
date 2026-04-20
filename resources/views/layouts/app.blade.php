@@ -96,6 +96,9 @@
                 font-size: 18px;
             }
         }
+        .ismandatory{
+            color: red;
+        }
     </style>
     
     @stack('styles')
@@ -125,7 +128,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.locations') }}">
-                                    <i class="fas fa-map-marker-alt"></i> Locations
+                                    <i class="fas fa-map-marker-alt"></i> Branch
                                 </a>
                             </li>
                             <li class="nav-item">

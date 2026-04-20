@@ -116,6 +116,7 @@ class AdminController extends Controller
     public function locations()
     {
         $locations = Location::withCount('employees')->get();
+       // dd($locations);
         return view('admin.locations', compact('locations'));
     }
 
@@ -222,11 +223,14 @@ class AdminController extends Controller
     public function gpsReports()
     {
         $users = User::where('gps_tracking_enabled', true)->get();
+
+
         return view('admin.gps-reports', compact('users'));
     }
 
     public function getUserGpsData(User $user, Request $request)
     {
+        
         $date = $request->get('date', today());
         
         $attendance = Attendance::where('user_id', $user->id)

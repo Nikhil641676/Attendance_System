@@ -227,15 +227,45 @@ class EmployeeController extends Controller
         return response()->json(['success' => true]);
     }
 
-    public function history()
+    // public function history()
+    // {
+    //     $user = auth()->user();
+    //     $attendances = Attendance::where('user_id', $user->id)
+    //         ->latest()
+    //         ->paginate(20);
+        
+    //     return view('employee.history', compact('attendances'));
+    // }
+
+    public function history(Request $request)
     {
         $user = auth()->user();
-        $attendances = Attendance::where('user_id', $user->id)
-            ->latest()
-            ->paginate(20);
+        
+        $query = Attendance::where('user_id', $user->id);
+        
+        // Apply filters
+        if ($request->from_date) {
+            $query->whereDate('date', '>=', $request->from_date);
+        }
+        if ($request->to_date) {
+            $query->whereDate('date', '<=', $request->to_date);
+        }
+        if ($request->status) {
+            $query->where('status', $request->status);
+        }
+        
+        $attendances = $query->latest('date')
+            ->paginate(20)
+            ->withQueryString();
+
+            // dd($attendances);
         
         return view('employee.history', compact('attendances'));
     }
+
+
+   
+    
 
     public function requestCorrection(Request $request)
     {
