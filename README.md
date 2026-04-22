@@ -93,7 +93,7 @@ A comprehensive employee attendance management system with GPS tracking and geof
 
 
 # Project Run
-
+# composer install
 # php artisan migrate --seed
 # php artisan db:seed --class=RolesAndPermissionsSeeder
 # php artisan serve
